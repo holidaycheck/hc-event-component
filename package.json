@@ -4,8 +4,12 @@
   "description": "A web-component containing all the things that (we think) represent an event.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ws --cors.origin=* --port 8989"
   },
   "author": "Wolfram Kriesing <wolfram.kriesing@holidaycheck.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "local-web-server": "^2.5.2"
+  }
 }

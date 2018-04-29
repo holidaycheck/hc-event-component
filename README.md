@@ -23,6 +23,11 @@ The plan is to use this web-component like so:
 </hc-event>
 ```
 
+## How to develop?
+
+Run `npm start` and you can open http://localhost:8989 in your browser where you can see/browse
+the files and tests.
+
 ## Install/setup, via nix - for local development
 
 The project can be built and run locally using nix, to reproduce the environment.
