@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html></html>
+<title>hc-event component</title>
+<script type="module" src="./HcEvent.js"></script>
+<body>
+  <style>
+    * {
+      font-family: Verdana, Arial;
+    }
+    address {
+      font-style: normal;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      display: inline;
+    }
+      ul li {
+        background: #fcf8e3;
+        padding: .2em;
+        list-style: none;
+        display: inline;
+      }
+  </style>
+  
+  <hc-event>
+    <time>2018-06-02 10:00</time> - <time>2018-06-02 18:00</time><br>
+    <address>HolidayCheck Office - Germany, 81673 Munich, Neumarkter Str. 61</address>
+    <a href="http://jscraftcamp.org/">event homepage</a><br>
+    <a href="https://www.twitter.com/jscraftcamp">@JSCraftCamp</a><br>
+    <ul is-tag>
+      <li>conference</li>
+      <li>JavaScript</li>
+    </ul>
+    <p>
+      And maybe some details about the event, or not ...
+    </p>
+  </hc-event>
+</body>
+</html>
