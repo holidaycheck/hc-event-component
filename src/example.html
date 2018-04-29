@@ -36,5 +36,14 @@
       And maybe some details about the event, or not ...
     </p>
   </hc-event>
+
+  <script>
+    const printTag = tag => console.log(tag);
+    
+    window.addEventListener('load', () => {
+      const hcEvents = document.querySelectorAll('hc-event');
+      hcEvents.forEach(hcEvent => hcEvent.withEachTag(printTag));
+    });
+  </script>
 </body>
 </html>

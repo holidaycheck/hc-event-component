@@ -1,12 +1,19 @@
+const allTags = (rootNode) => {
+  const tagNodes = rootNode.querySelectorAll('[is-tag-list] *');
+  const tags = [];
+  tagNodes.forEach(node => tags.push(node.innerText));
+  return tags;  
+}
+
 class HcEvent extends HTMLElement {
-  connectedCallback() {
-  }
   hasTag(tagName) {
-    const tagNodes = this.querySelectorAll('[is-tag-list] *');
-    const tags = [];
-    tagNodes.forEach(node => tags.push(node.innerText));
+    const tags = allTags(this);
     const lowerCaseTags = tags.map(tag => tag.toLowerCase());
     return lowerCaseTags.includes(tagName.toLowerCase());
+  }
+  withEachTag(cb) {
+    const tags = allTags(this);
+    tags.forEach(cb);
   }
 }
 
