@@ -1,0 +1,11 @@
+{
+  "name": "hc-event-component",
+  "version": "1.0.0",
+  "description": "A web-component containing all the things that (we think) represent an event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wolfram Kriesing <wolfram.kriesing@holidaycheck.com>",
+  "license": "MIT"
+}
