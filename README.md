@@ -17,9 +17,16 @@ Though in doubt decisions need to be taken, decisions are made in favour of tech
 The plan is to use this web-component like so:
 ```html
 <hc-event>
-  <???>tbd</???>
+  Start: <time>May 1st 2018, 20:00</time>
+  End: <time>May 1st 2018, 22:00</time>
   <address>HolidayCheck Office - Germany, 81673 Munich, Neumarkter Str. 61</address>
-  <???>tbd</???>
+  <a href="http://jscraftcamp.org/">event homepage</a>
+  <a href="https://www.twitter.com/jscraftcamp">@JSCraftCamp on twitter</a>
+  Tags: <ul>
+    <li>conference</li>
+    <li>JavaScript</li>
+  </ul>
+  And maybe some details about the event, or not ...
 </hc-event>
 ```
 
