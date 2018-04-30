@@ -29,7 +29,22 @@
     <a href="http://jscraftcamp.org/">event homepage</a><br>
     <a href="https://www.twitter.com/jscraftcamp">@JSCraftCamp</a><br>
     <ul is-tag-list>
-      <li>conference</li>
+      <li>unconference</li>
+      <li>open space</li>
+      <li>JavaScript</li>
+    </ul>
+    <p>
+      And maybe some details about the event, or not ...
+    </p>
+  </hc-event>
+  
+  <hc-event>
+    <time>2018-05-01 9:30</time> - <time>2018-05-02 18:00</time><br>
+    <address>Some where else, not in HC offices</address>
+    <a href="http://jscoderetreat.com/">event homepage</a><br>
+    <a href="https://www.twitter.com/jscoderetreat">@JSCodeRetreat</a><br>
+    <ul is-tag-list>
+      <li>CodeRetreat</li>
       <li>JavaScript</li>
     </ul>
     <p>
@@ -37,8 +52,11 @@
     </p>
   </hc-event>
 
+  <hr>
+  <h2>All tags, of all events listed above</h2>
+  <div id="all-tags"></div>
   <script>
-    const printTag = tag => console.log(tag);
+    const printTag = tag => document.getElementById('all-tags').innerHTML += `${tag}<br>`;
     
     window.addEventListener('load', () => {
       const hcEvents = document.querySelectorAll('hc-event');
