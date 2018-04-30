@@ -11,6 +11,12 @@ const addressIsAtHolidayCheck = rootNode => {
   return addressText.toLowerCase().includes('holidaycheck');
 }
 
+const toReadableTimeNode = node => {
+  const options = {weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric'};
+  const startDate = new Date(node.innerText);
+  node.innerText = startDate.toLocaleDateString('en-GB', options);
+}
+
 class HcEvent extends HTMLElement {
   connectedCallback() {
     if (addressIsAtHolidayCheck(this)) {
@@ -19,6 +25,9 @@ class HcEvent extends HTMLElement {
       const addressNode = this.querySelector('address');
       addressNode.parentNode.insertBefore(img, addressNode);
     }
+    const [startDateTime, endDateTime] = this.querySelectorAll('time');
+    toReadableTimeNode(startDateTime);
+    toReadableTimeNode(endDateTime);
   }
   hasTag(tagName) {
     const tags = allTags(this);
