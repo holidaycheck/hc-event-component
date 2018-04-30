@@ -1,5 +1,5 @@
 const allTags = rootNode => {
-  const tagNodes = rootNode.querySelectorAll('[is-tag-list] *');
+  const tagNodes = rootNode.querySelectorAll('hc-event-tags *');
   const tags = [];
   tagNodes.forEach(node => tags.push(node.innerText));
   return tags;  
