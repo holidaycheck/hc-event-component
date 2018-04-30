@@ -12,9 +12,10 @@ const addressIsAtHolidayCheck = rootNode => {
 }
 
 const toReadableTimeNode = node => {
-  const options = {weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric'};
-  const startDate = new Date(node.innerText);
-  node.innerText = startDate.toLocaleDateString('en-GB', options);
+  const options = {weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric'};
+  const date = new Date(node.innerText);
+  node.setAttribute('datetime', date.toISOString());
+  node.innerText = date.toLocaleDateString('en-GB', options);
 }
 
 class HcEvent extends HTMLElement {
