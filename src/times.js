@@ -2,6 +2,7 @@ const longTimeOptions = {weekday: 'short', month: 'long', day: 'numeric', hour: 
 const dayOnlyOptions = {weekday: 'short', month: 'long', day: 'numeric'};
 const timeOnlyOptions = {hour: 'numeric', minute: 'numeric'};
 const isSameDay = (date1, date2) => date1.toLocaleDateString() === date2.toLocaleDateString();
+
 export const formatTimes = ([startDateTime, endDateTime]) => {
   if (!endDateTime) {
     formatStartTime(startDateTime);
