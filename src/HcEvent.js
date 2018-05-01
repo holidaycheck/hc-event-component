@@ -2,7 +2,7 @@ import {formatTimes} from './times.js';
 
 /*
 TODO
-- [ ] nicer dates, more readable
+- [x] nicer dates, more readable
 - [ ] link the map, <a href="http://maps.google.com/maps?q=" className="fa fa-map"></a><br>
 - [ ] filter by tag
 - [ ] provide structured data http://schema.org/Event , https://developers.google.com/search/docs/guides/intro-structured-data
