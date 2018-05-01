@@ -3,6 +3,7 @@ TODO
 - nicer dates, more readable
 - link the map, <a href="http://maps.google.com/maps?q=" className="fa fa-map"></a><br>
 - filter by tag
+- provide structured data https://developers.google.com/search/docs/guides/intro-structured-data
 - show some tags only, expand on demand
 - show description when hovering the event
 - show nice tooltips on hover (e.g. location, datetime info, twitter account)
