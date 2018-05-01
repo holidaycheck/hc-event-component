@@ -1,3 +1,13 @@
+const fixOneDigitHourForSafari = date => {
+  // The hour MUST be two-digits, otherwise Safari will say "Invalid Date" :(
+  const splitDate = date.split(' ');
+  if (/^\d\:/.test(splitDate[1])) {
+    return [splitDate[0], '0'+splitDate[1]].join(' ');
+  }
+  return date;
+}
+const fixDateForSafari = (date) => fixOneDigitHourForSafari(date).replace(' ', 'T');
+const newDate = date => new Date(fixDateForSafari(date));
 const longTimeOptions = {weekday: 'short', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'};
 const dayOnlyOptions = {weekday: 'short', month: 'long', day: 'numeric'};
 const timeOnlyOptions = {hour: 'numeric', minute: 'numeric'};
@@ -8,8 +18,8 @@ export const formatTimes = ([startDateTime, endDateTime]) => {
     formatStartTime(startDateTime);
     return;
   }
-  const startDate = new Date(startDateTime.innerText);
-  const endDate = new Date(endDateTime.innerText);
+  const startDate = newDate(startDateTime.innerText);
+  const endDate = newDate(endDateTime.innerText);
   startDateTime.setAttribute('datetime', startDate.toISOString());
   endDateTime.setAttribute('datetime', endDate.toISOString());
   if (isSameDay(startDate, endDate)) {
@@ -22,7 +32,7 @@ export const formatTimes = ([startDateTime, endDateTime]) => {
 }
 
 const formatStartTime = startDateTime => {
-  const startDate = new Date(startDateTime.innerText);
+  const startDate = newDate(startDateTime.innerText);
   startDateTime.setAttribute('datetime', startDate.toISOString());
   startDateTime.innerText = startDate.toLocaleDateString('en-GB', longTimeOptions);
 }
