@@ -1,0 +1,12 @@
+hc-event address {
+  font-style: normal;
+}
+hc-event-tags li {
+  background: #fcf8e3;
+  padding: .2em;
+  list-style: none;
+  display: inline;
+}
+hc-event img {
+  height: 20px;
+}
