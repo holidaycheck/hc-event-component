@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ws --cors.origin=* --port 8989"
+    "start": "ws --cors.origin=* --port 8989",
+    "test": "kavun src"
   },
   "author": "Wolfram Kriesing <wolfram.kriesing@holidaycheck.com>",
   "license": "MIT",
