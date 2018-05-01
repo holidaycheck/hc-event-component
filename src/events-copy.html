@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<title>The HolidayCheck Tech Blog | Events</title>
+<link rel="shortcut icon" href="//techblog.holidaycheck.com/img/hc-labs-only-logo64x64.png">
+
+<script type="module" src="./HcEvent.js"></script>
+<link rel="stylesheet" href="./style.css"/>
+
+<body>
+  <style>
+    @import url(//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Droid+Serif:400,400italic,700|Playfair+Display);html {
+        font-family: sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%
+    }
+    @font-face {
+        font-family: 'FontAwesome';
+        src: url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.eot?v=4.3.0");
+        src: url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"),url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"),url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+        font-weight: normal;
+        font-style: normal
+    }
+    
+    body {
+      line-height: 1.65;
+      margin-left: 10rem;
+      margin-top: 3rem;
+    }
+    * {
+      color: #333337;
+      font-family: "Droid Serif",serif;
+      font-size: 21px;
+    }
+    a {
+      color: #0058a3;
+      text-decoration: none;
+    }
+    a:hover, a:active, a:focus {
+      text-decoration: none;
+      color: #333337;
+      border-bottom: solid 1px #fad73c;
+    }
+    .fa {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transform: translate(0, 0);
+    }
+    .fa-twitter:before {
+        content: "\f099";
+    }
+    .fa-map:before {
+      content: "\f041";
+    }
+  </style>
+  
+  <hc-event>
+    <time>2018-06-02 10:00</time> - <time>2018-06-02 18:00</time>
+    <hc-event-tags>
+      <li>unconference</li>
+      <li>open space</li>
+      <li>JavaScript</li>
+      <li>self organizing</li>
+      <li>learning</li>
+    </hc-event-tags>
+    <address>HolidayCheck Office - Germany, 81673 Munich, Neumarkter Str. 61</address>
+    <a href="http://jscraftcamp.org/">JSCraftCamp 2018</a>
+    <a href="https://www.twitter.com/jscraftcamp" class="fa fa-twitter"></a>
+    <p>
+      And maybe some details about the event, or not ...
+    </p>
+  </hc-event>
+  
+  <hc-event>
+    <time>2018-05-01 9:30</time> - <time>2018-05-02 18:00</time>
+    <hc-event-tags>
+      <li>CodeRetreat</li>
+      <li>JavaScript</li>
+    </hc-event-tags>
+    <address>Some where else, not in HC offices</address>
+    <a href="http://jscoderetreat.com/">JS CodeRetreat #13</a>
+    <a href="https://www.twitter.com/jscoderetreat" class="fa fa-twitter"></a><br>
+    <p>
+      And maybe some details about the event, or not ...
+    </p>
+  </hc-event>
+</body>
+</html>
