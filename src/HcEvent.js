@@ -25,6 +25,17 @@ const addressIsAtHolidayCheck = rootNode => {
   return addressText.toLowerCase().includes('holidaycheck');
 }
 
+const addMapsLink = rootNode => {
+  const addressNode = rootNode.querySelector('address');
+  if (!addressNode) return;
+  const address = addressNode.innerText;
+  const mapsLink = document.createElement('a');
+  mapsLink.href = `http://maps.google.com/maps?q=${encodeURIComponent(address)}`;
+  mapsLink.classList.add('fa', 'fa-map');
+  mapsLink.target = '_blank';
+  rootNode.appendChild(mapsLink);
+}
+
 class HcEvent extends HTMLElement {
   connectedCallback() {
     if (addressIsAtHolidayCheck(this)) {
@@ -34,6 +45,7 @@ class HcEvent extends HTMLElement {
       addressNode.parentNode.insertBefore(img, addressNode);
     }
     formatTimes(this.querySelectorAll('time'));
+    addMapsLink(this);
   }
   hasTag(tagName) {
     const tags = allTags(this);

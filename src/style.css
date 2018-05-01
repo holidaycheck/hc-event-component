@@ -1,5 +1,13 @@
+hc-event {
+  display: block;
+  margin-bottom: 1rem;
+}
+hc-event p {
+  display: none;
+}
 hc-event address {
   font-style: normal;
+  display: none;
 }
 hc-event-tags li {
   background: #fcf8e3;
