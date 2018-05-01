@@ -66,5 +66,5 @@ a working JS class that "brings the web-component to life" should just not rende
 any different than `<span>nothing here</span>`. Of course, you say.
 Yes, of course. But that also means, that it should not be built like this:
 ~~`<some-comp content="nothing here"/>`~~ or ~~`<some-comp/><script>someComp.setContent("nothing here")</script>`~~ ... NO NO NO. The latter examples are just useless tag shells, that
-don't really make any use of HTML other than seeing them as necessary vehicles to render
-something on the screen. Think different!
+don't really make any use of HTML other than seeing it as a necessary vehicle to render
+something on the screen. Think HTML!
