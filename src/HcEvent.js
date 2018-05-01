@@ -5,7 +5,7 @@ TODO
 - [x] nicer dates, more readable
 - [ ] link the map, <a href="http://maps.google.com/maps?q=" className="fa fa-map"></a><br>
 - [ ] filter by tag
-- [ ] provide structured data http://schema.org/Event , https://developers.google.com/search/docs/guides/intro-structured-data
+- [ ] provide structured data http://schema.org/Event for event: https://developers.google.com/search/docs/data-types/event
 - [ ] show some tags only, expand on demand
 - [ ] show description when hovering the event
 - [ ] show nice tooltips on hover (e.g. location, datetime info, twitter account)
