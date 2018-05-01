@@ -3,7 +3,8 @@ hc-event address {
 }
 hc-event-tags li {
   background: #fcf8e3;
-  padding: .2em;
+  padding: .2rem;
+  margin-left: 0.5rem;
   list-style: none;
   display: inline;
 }
