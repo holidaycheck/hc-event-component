@@ -1,3 +1,13 @@
+/*
+TODO
+- nicer dates, more readable
+- link the map, <a href="http://maps.google.com/maps?q=" className="fa fa-map"></a><br>
+- filter by tag
+- show description when hovering the event
+- show nice tooltips on hover (e.g. location, datetime info, twitter account)
+- "tweet this event" button
+ */
+
 const allTags = rootNode => {
   const tagNodes = rootNode.querySelectorAll('hc-event-tags *');
   const tags = [];
