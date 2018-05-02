@@ -9,6 +9,11 @@ hc-event address {
   font-style: normal;
   display: none;
 }
+hc-event-tags ul {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
 hc-event-tags li {
   background: #fcf8e3;
   padding: .2rem;
