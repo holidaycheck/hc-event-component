@@ -9,6 +9,16 @@ hc-event address {
   font-style: normal;
   display: none;
 }
+hc-event-tags {
+  position: absolute;
+  width: 25rem;
+  height: 1.5rem;
+  overflow: hidden;
+}
+hc-event-tags:hover {
+  height: auto;
+  z-index: 100;
+}
 hc-event-tags ul {
   margin: 0;
   padding: 0;
@@ -20,6 +30,7 @@ hc-event-tags li {
   margin-left: 0.5rem;
   list-style: none;
   display: inline;
+  white-space: nowrap;
 }
 hc-event img {
   height: 20px;
