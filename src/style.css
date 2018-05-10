@@ -7,7 +7,6 @@ hc-event p {
 }
 hc-event address {
   font-style: normal;
-  display: none;
 }
 hc-event-tags {
   position: absolute;

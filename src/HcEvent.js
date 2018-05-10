@@ -29,6 +29,7 @@ const addressIsAtHolidayCheck = rootNode => {
 const addMapsLink = rootNode => {
   const addressNode = rootNode.querySelector('address');
   if (!addressNode) return;
+  addressNode.style.display = 'none';
   const address = addressNode.innerText;
   const mapsLink = document.createElement('a');
   mapsLink.href = `http://maps.google.com/maps?q=${encodeURIComponent(address)}`;
