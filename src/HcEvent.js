@@ -4,7 +4,7 @@ import {formatTimes} from './times.js';
 TODO
 - [x] nicer dates, more readable
 - [x] link the map, <a href="http://maps.google.com/maps?q=" className="fa fa-map"></a><br>
-- [ ] add nomodule, for those browsers that need it (and i would also assume they dont speak ES6 and need the polyfill)
+- [x] add nomodule, for those browsers that need it (and i would also assume they dont speak ES6 and need the polyfill)
 - [x] show some tags only, expand on demand
 - [ ] filter by tag
 - [ ] provide structured data http://schema.org/Event for event: https://developers.google.com/search/docs/data-types/event
