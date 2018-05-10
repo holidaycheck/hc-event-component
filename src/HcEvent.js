@@ -42,7 +42,7 @@ class HcEvent extends HTMLElement {
   connectedCallback() {
     if (addressIsAtHolidayCheck(this)) {
       const img = new Image();
-      img.src = 'http://techblog.holidaycheck.com/img/hc-labs-only-logo.svg';
+      img.src = '//techblog.holidaycheck.com/img/hc-labs-only-logo.svg';
       const addressNode = this.querySelector('address');
       addressNode.parentNode.insertBefore(img, addressNode);
     }
