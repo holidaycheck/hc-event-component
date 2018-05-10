@@ -10,6 +10,10 @@
   "author": "Wolfram Kriesing <wolfram.kriesing@holidaycheck.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.2",
     "kavun": "^0.3.0",
     "local-web-server": "^2.5.2"
   }
