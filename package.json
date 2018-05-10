@@ -6,7 +6,7 @@
   "scripts": {
     "start": "ws --cors.origin=* --port 8989",
     "test": "kavun src",
-    "build": "browserify src/HcEvent.js --outfile build/HcEvent.js -t [ babelify --no-babelrc --presets=\"env\" ]"
+    "build": "browserify src/HcEvent.js --outfile src/build/HcEvent.js -t [ babelify --no-babelrc --presets=\"env\" ]"
   },
   "author": "Wolfram Kriesing <wolfram.kriesing@holidaycheck.com>",
   "license": "MIT",

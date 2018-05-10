@@ -8,6 +8,7 @@ before_deploy:
 deploy:
   provider: pages
   skip-cleanup: true
+  local-dir: src
   name: Auto Deploy through Travis
   target-branch: gh-pages
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
