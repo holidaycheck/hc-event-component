@@ -65,7 +65,7 @@ var HcEvent = function (_HTMLElement) {
     value: function connectedCallback() {
       if (addressIsAtHolidayCheck(this)) {
         var img = new Image();
-        img.src = 'http://techblog.holidaycheck.com/img/hc-labs-only-logo.svg';
+        img.src = '//techblog.holidaycheck.com/img/hc-labs-only-logo.svg';
         var addressNode = this.querySelector('address');
         addressNode.parentNode.insertBefore(img, addressNode);
       }
