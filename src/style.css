@@ -1,0 +1,39 @@
+hc-event {
+  display: block;
+  margin-bottom: 1rem;
+}
+hc-event p {
+  display: none;
+}
+hc-event address {
+  font-style: normal;
+}
+hc-event-tags {
+  position: absolute;
+  width: 25rem;
+  height: 1.5rem;
+  overflow: hidden;
+  background: white;
+}
+hc-event-tags:hover {
+  height: auto;
+  z-index: 100;
+  background: #0058a37d;
+  transition: background 1s linear;
+}
+hc-event-tags ul {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+hc-event-tags li {
+  background: #fcf8e3;
+  padding: .2rem;
+  margin-left: 0.5rem;
+  list-style: none;
+  display: inline;
+  white-space: nowrap;
+}
+hc-event img {
+  height: 20px;
+}
