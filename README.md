@@ -6,6 +6,22 @@ This component contains all the things that (we think) represent an event.
 [web-component]: https://www.webcomponents.org/introduction
 [gold standard]: https://github.com/webcomponents/gold-standard/wiki
 
+## Demo
+
+On a modern browser, that [supports ES6 modules][caniuse-es6] and [web-components][caniuse-webcomps], you could
+try the [rawgit.com][rawgit-link] which serves purely the files as they were
+committed into git. This version will fallback to the non-web-component
+version and should gracefully degrade and still be usable.
+
+Alternatively there is a [built version][built-version], that serves the ES6 version and a 
+version that was transpiled down to ES5, so that any browser will be able to run
+the JS. It will also load the polyfill for web-components.
+
+[caniuse-es6]: https://caniuse.com/#feat=es6-module
+[caniuse-webcomps]: https://caniuse.com/#feat=custom-elementsv1
+[rawgit-link]: https://rawgit.com/holidaycheck/hc-event-component/master/src/index.html
+[built-version]: https://holidaycheck.github.io/hc-event-component/index.html
+
 ## What event? 
 
 An event is meant to be a conference, meetup, call for papers,
