@@ -1,12 +1,6 @@
 hc-event {
   display: block;
 }
-hc-event-tags {
-  position: absolute;
-  width: 25rem;
-  height: 1.5rem;
-  overflow: hidden;
-}
 hc-event-tags:hover {
   height: auto;
   z-index: 100;
