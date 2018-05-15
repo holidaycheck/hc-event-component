@@ -1,13 +1,12 @@
 hc-event {
   display: block;
-  margin-bottom: 1rem;
 }
 hc-event-tags {
   position: absolute;
   width: 25rem;
   height: 1.5rem;
   overflow: hidden;
-  background: white;
+  background: inherit;
 }
 hc-event-tags:hover {
   height: auto;

@@ -25,7 +25,6 @@
     
     body {
       line-height: 1.65;
-      margin-left: 10rem;
       margin-top: 3rem;
     }
     * {
@@ -57,9 +56,22 @@
     .fa-map:before {
       content: "\f041";
     }
+    hc-event {
+      padding: 0.5rem 0 0.5rem 10rem;
+    }
+    hc-event:nth-child(odd) {
+      background: #EEEEEE;
+    }
+    hc-event:hover {
+      background: #0058a311;
+    }
+    hc-event p {
+      font-size: x-small;
+      margin: 0;
+    }
   </style>
   
-  <hc-event>
+  <hc-event itemscope itemtype="http://schema.org/Event">
     <time>2018-06-02 10:00</time> - <time>2018-06-02 18:00</time>
     <hc-event-tags>
       <ul>
