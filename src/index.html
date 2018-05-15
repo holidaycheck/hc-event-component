@@ -26,8 +26,6 @@
     body {
       line-height: 1.65;
       margin-top: 3rem;
-    }
-    * {
       color: #333337;
       font-family: "Droid Serif",serif;
       font-size: 21px;
@@ -65,14 +63,15 @@
     hc-event:hover {
       background: #0058a311;
     }
-    hc-event p {
-      font-size: x-small;
+    hc-event [itemprop=description] {
+      font-size: small;
       margin: 0;
     }
   </style>
   
   <hc-event itemscope itemtype="http://schema.org/Event">
-    <time>2018-06-02 10:00</time> - <time>2018-06-02 18:00</time>
+    <time itemprop="startDate" content="2018-06-02 10:00">2018-06-02 10:00</time> - 
+    <time itemprop="endDate" content="2018-06-02 18:00">2018-06-02 18:00</time>
     <hc-event-tags>
       <ul>
         <li>unconference</li>
@@ -83,12 +82,28 @@
       </ul>
     </hc-event-tags>
     <br>
-    <a href="http://jscraftcamp.org/">JSCraftCamp 2018</a>
-    <a href="http://maps.google.com/maps?q=HolidayCheck%20Office%20-%20Germany%2C%2081673%20Munich%2C%20Neumarkter%20Str.%2061" class="fa fa-map">HolidayCheck Office - Germany, 81673 Munich, Neumarkter Str. 61</a>
+    
+    <meta itemprop="name" content="JSCraftCamp 2018"/>
+    <a itemprop="url" href="http://jscraftcamp.org/">JSCraftCamp 2018</a>
+    
+    <meta itemprop="location" content="HolidayCheck Office - Germany, 81673 Munich, Neumarkter Str. 61"/>
+    <a href="http://maps.google.com/maps?q=HolidayCheck%20Office%20-%20Germany%2C%2081673%20Munich%2C%20Neumarkter%20Str.%2061" class="fa fa-map"></a>
+    
     <a href="https://www.twitter.com/jscraftcamp" class="fa fa-twitter"></a>
-    <p>
-      And maybe some details about the event, or not ...
+    
+    <p itemprop="description">
+      This event uses <a href="http://schema.org/Event">schema.org microdata</a> for outlining the
+      event's data.
     </p>
+    <ul itemprop="description">
+      <li>See the "itemscope" and the other various "item*" attributes on the according DOM nodes. 
+      <li>Also note the start/endDate each duplicate the timestamp, in the "content" attribute
+          and inside the node's content itself.
+      <li>The embedded "meta" tag contains the complete address, marked with "itemprop=location"
+          to tell all the machines the actual address, which is also URI encoded in the maps URL below.
+      <li>The "itemprop=url" marks the event's URL.</li>
+      <li>The meta tag "itemprop=name" specifies the name of the event, since the a-href is already in use for the URL.</li>
+    </ul>
   </hc-event>
   
   <hc-event>
