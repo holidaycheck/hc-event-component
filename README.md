@@ -35,13 +35,14 @@ The plan is to use this web-component like so:
   <hc-event>
     <time>2018-06-02 10:00</time> - <time>2018-06-02 18:00</time>
     <hc-event-tags>
-      <li>unconference</li>
-      <li>open space</li>
-      <li>JavaScript</li>
-      <li>self organizing</li>
-      <li>learning</li>
+      <ul>
+        <li>unconference</li>
+        <li>open space</li>
+        <li>JavaScript</li>
+        <li>self organizing</li>
+        <li>learning</li>
+      </ul>
     </hc-event-tags>
-    <address>HolidayCheck Office - Germany, 81673 Munich, Neumarkter Str. 61</address>
     <a href="http://jscraftcamp.org/">JSCraftCamp 2018</a>
     <a href="https://www.twitter.com/jscraftcamp" class="fa fa-twitter"></a>
     <p>
