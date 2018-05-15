@@ -20,34 +20,9 @@ const allTags = rootNode => {
   return tags;  
 }
 
-const addressIsAtHolidayCheck = rootNode => {
-  let addressNode = rootNode.querySelector('address');
-  const addressText = addressNode ? addressNode.innerText : '';
-  return addressText.toLowerCase().includes('holidaycheck');
-}
-
-const addMapsLink = rootNode => {
-  const addressNode = rootNode.querySelector('address');
-  if (!addressNode) return;
-  addressNode.style.display = 'none';
-  const address = addressNode.innerText;
-  const mapsLink = document.createElement('a');
-  mapsLink.href = `http://maps.google.com/maps?q=${encodeURIComponent(address)}`;
-  mapsLink.classList.add('fa', 'fa-map');
-  mapsLink.target = '_blank';
-  rootNode.appendChild(mapsLink);
-}
-
 class HcEvent extends HTMLElement {
   connectedCallback() {
-    if (addressIsAtHolidayCheck(this)) {
-      const img = new Image();
-      img.src = '//techblog.holidaycheck.com/img/hc-labs-only-logo.svg';
-      const addressNode = this.querySelector('address');
-      addressNode.parentNode.insertBefore(img, addressNode);
-    }
     formatTimes(this.querySelectorAll('time'));
-    addMapsLink(this);
   }
   hasTag(tagName) {
     const tags = allTags(this);

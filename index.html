@@ -26,10 +26,7 @@
     
     body {
       line-height: 1.65;
-      margin-left: 10rem;
       margin-top: 3rem;
-    }
-    * {
       color: #333337;
       font-family: "Droid Serif",serif;
       font-size: 21px;
@@ -58,10 +55,33 @@
     .fa-map:before {
       content: "\f041";
     }
+    
+    hc-event {
+      padding: 0.5rem 0 0.5rem 10rem;
+    }
+    hc-event:nth-child(odd) {
+      background: #EEEEEE;
+    }
+    hc-event:hover {
+      background: #0058a311;
+    }
+    hc-event p,
+    hc-event [itemprop=description] {
+      font-size: small;
+      margin: 0;
+    }
+    hc-event-tags {
+      position: absolute;
+      width: 40rem;
+      height: 2rem;
+      overflow: hidden;
+    }
+    
   </style>
   
-  <hc-event>
-    <time>2018-06-02 10:00</time> - <time>2018-06-02 18:00</time>
+  <hc-event itemscope itemtype="http://schema.org/Event">
+    <time itemprop="startDate" content="2018-06-02 10:00">2018-06-02 10:00</time> - 
+    <time itemprop="endDate" content="2018-06-02 18:00">2018-06-02 18:00</time>
     <hc-event-tags>
       <ul>
         <li>unconference</li>
@@ -72,12 +92,28 @@
       </ul>
     </hc-event-tags>
     <br>
-    <address>HolidayCheck Office - Germany, 81673 Munich, Neumarkter Str. 61</address>
-    <a href="http://jscraftcamp.org/">JSCraftCamp 2018</a>
+    
+    <meta itemprop="name" content="JSCraftCamp 2018"/>
+    <a itemprop="url" href="http://jscraftcamp.org/">JSCraftCamp 2018</a>
+    
+    <meta itemprop="location" content="HolidayCheck Office - Germany, 81673 Munich, Neumarkter Str. 61"/>
+    <a href="http://maps.google.com/maps?q=HolidayCheck%20Office%20-%20Germany%2C%2081673%20Munich%2C%20Neumarkter%20Str.%2061" class="fa fa-map"></a>
+    
     <a href="https://www.twitter.com/jscraftcamp" class="fa fa-twitter"></a>
-    <p>
-      And maybe some details about the event, or not ...
+    
+    <p itemprop="description">
+      This event uses <a href="http://schema.org/Event">schema.org microdata</a> for outlining the
+      event's data.
     </p>
+    <ul itemprop="description">
+      <li>See the "itemscope" and the other various "item*" attributes on the according DOM nodes. 
+      <li>Also note the start/endDate each duplicate the timestamp, in the "content" attribute
+          and inside the node's content itself.
+      <li>The embedded "meta" tag contains the complete address, marked with "itemprop=location"
+          to tell all the machines the actual address, which is also URI encoded in the maps URL below.
+      <li>The "itemprop=url" marks the event's URL.</li>
+      <li>The meta tag "itemprop=name" specifies the name of the event, since the a-href is already in use for the URL.</li>
+    </ul>
   </hc-event>
   
   <hc-event>
@@ -89,12 +125,25 @@
       </ul>
     </hc-event-tags>
     <br>
-    <address>Some where else, not in HC offices</address>
     <a href="http://jscoderetreat.com/">JS CodeRetreat #13</a>
+    <a href="http://maps.google.com/maps?q=Some%20where%20else%2C%20not%20in%20HC%20offices" class="fa fa-map"></a>
     <a href="https://www.twitter.com/jscoderetreat" class="fa fa-twitter"></a>
-    <p>
-      And maybe some details about the event, or not ...
+    <p itemprop="description">
+      This event uses <a href="http://schema.org/Event">schema.org JSON-LD</a> for outlining the
+      event's data. See the JSON-LD block in the code, for details.
     </p>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Event",
+      "location": "Some where else, not in HC offices",
+      "name": "JS CodeRetreat #13"
+      "startDate": "2018-05-01 9:30",
+      "startDate": "2018-05-02 18:00",
+      "url": "http://jscoderetreat.com/",
+      "description": " ... I didnt put it in here :) "
+    }
+    </script>
   </hc-event>
   
   <hc-event>
@@ -116,9 +165,10 @@
       </ul>
     </hc-event-tags>
     <br>
-    <address>London, England</address>
     <a href="https://smashingconf.com/">Smashing Conference</a>
+    <a href="http://maps.google.com/maps?q=London%2C%20England" class="fa fa-map">London, England</a>
     <a href="https://www.twitter.com/smashingconf" class="fa fa-twitter"></a>
+    <p>This event is not schema outlined at all, so it's not so nicely machine readable. Bummer.</p>
   </hc-event>
 
   <hc-event>
@@ -130,8 +180,8 @@
       </ul>
     </hc-event-tags>
     <br>
-    <address>HolidayCheck offices, Munich, Germany</address>
     <a href="https://www.meetup.com/JavaScript-The-Language/events/249034286/">JavaScript The Language - Map, Set, WeakMap</a>
+    <a href="http://maps.google.com/maps?q=HolidayCheck%20offices%2C%20Munich%2C%20Germany" class="fa fa-map">HolidayCheck offices, Munich, Germany</a>
   </hc-event>
 
 </body>

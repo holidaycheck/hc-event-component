@@ -33,24 +33,6 @@ var allTags = function allTags(rootNode) {
   return tags;
 };
 
-var addressIsAtHolidayCheck = function addressIsAtHolidayCheck(rootNode) {
-  var addressNode = rootNode.querySelector('address');
-  var addressText = addressNode ? addressNode.innerText : '';
-  return addressText.toLowerCase().includes('holidaycheck');
-};
-
-var addMapsLink = function addMapsLink(rootNode) {
-  var addressNode = rootNode.querySelector('address');
-  if (!addressNode) return;
-  addressNode.style.display = 'none';
-  var address = addressNode.innerText;
-  var mapsLink = document.createElement('a');
-  mapsLink.href = 'http://maps.google.com/maps?q=' + encodeURIComponent(address);
-  mapsLink.classList.add('fa', 'fa-map');
-  mapsLink.target = '_blank';
-  rootNode.appendChild(mapsLink);
-};
-
 var HcEvent = function (_HTMLElement) {
   _inherits(HcEvent, _HTMLElement);
 
@@ -63,14 +45,7 @@ var HcEvent = function (_HTMLElement) {
   _createClass(HcEvent, [{
     key: 'connectedCallback',
     value: function connectedCallback() {
-      if (addressIsAtHolidayCheck(this)) {
-        var img = new Image();
-        img.src = '//techblog.holidaycheck.com/img/hc-labs-only-logo.svg';
-        var addressNode = this.querySelector('address');
-        addressNode.parentNode.insertBefore(img, addressNode);
-      }
       (0, _times.formatTimes)(this.querySelectorAll('time'));
-      addMapsLink(this);
     }
   }, {
     key: 'hasTag',
