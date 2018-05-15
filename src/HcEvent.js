@@ -20,20 +20,8 @@ const allTags = rootNode => {
   return tags;  
 }
 
-const addressIsAtHolidayCheck = rootNode => {
-  let addressNode = rootNode.querySelector('address');
-  const addressText = addressNode ? addressNode.innerText : '';
-  return addressText.toLowerCase().includes('holidaycheck');
-}
-
 class HcEvent extends HTMLElement {
   connectedCallback() {
-    if (addressIsAtHolidayCheck(this)) {
-      const img = new Image();
-      img.src = '//techblog.holidaycheck.com/img/hc-labs-only-logo.svg';
-      const addressNode = this.querySelector('address');
-      addressNode.parentNode.insertBefore(img, addressNode);
-    }
     formatTimes(this.querySelectorAll('time'));
   }
   hasTag(tagName) {
