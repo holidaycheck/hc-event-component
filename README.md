@@ -30,6 +30,7 @@ Though in doubt decisions need to be taken, decisions are made in favour of tech
 
 ## How to use?
 
+For the best documentation look inside the [index.html](./src/index.html).
 The plan is to use this web-component like so:
 ```html
   <hc-event>
@@ -50,6 +51,15 @@ The plan is to use this web-component like so:
     </p>
   </hc-event>
 ```
+
+## What does the web component do?
+
+Actually the web component `<hc-event>` is quite stupid and does not do a lot.
+The one core feature it has is:
+- make the dates in the `<time>` DOM nodes more readable by applying some simple logic
+  - when a start and an end date is given it figures out how to make it most readable
+    e.g. "1 May - 2 May", or "1 May 10:00 - 12:00"
+  - if only a start date is given the date and time is nicely formatted
 
 ## How to develop?
 
