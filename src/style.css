@@ -2,12 +2,6 @@ hc-event {
   display: block;
   margin-bottom: 1rem;
 }
-hc-event p {
-  display: none;
-}
-hc-event address {
-  font-style: normal;
-}
 hc-event-tags {
   position: absolute;
   width: 25rem;
