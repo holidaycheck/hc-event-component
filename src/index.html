@@ -124,11 +124,24 @@
     </hc-event-tags>
     <br>
     <a href="http://jscoderetreat.com/">JS CodeRetreat #13</a>
-    <a href="http://maps.google.com/maps?q=Some%20where%20else%2C%20not%20in%20HC%20offices" class="fa fa-map">Some where else, not in HC offices</a>
+    <a href="http://maps.google.com/maps?q=Some%20where%20else%2C%20not%20in%20HC%20offices" class="fa fa-map"></a>
     <a href="https://www.twitter.com/jscoderetreat" class="fa fa-twitter"></a>
-    <p>
-      And maybe some details about the event, or not ...
+    <p itemprop="description">
+      This event uses <a href="http://schema.org/Event">schema.org JSON-LD</a> for outlining the
+      event's data. See the JSON-LD block in the code, for details.
     </p>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Event",
+      "location": "Some where else, not in HC offices",
+      "name": "JS CodeRetreat #13"
+      "startDate": "2018-05-01 9:30",
+      "startDate": "2018-05-02 18:00",
+      "url": "http://jscoderetreat.com/",
+      "description": " ... I didnt put it in here :) "
+    }
+    </script>
   </hc-event>
   
   <hc-event>
