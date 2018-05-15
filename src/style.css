@@ -6,7 +6,6 @@ hc-event-tags {
   width: 25rem;
   height: 1.5rem;
   overflow: hidden;
-  background: inherit;
 }
 hc-event-tags:hover {
   height: auto;
