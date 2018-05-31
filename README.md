@@ -55,11 +55,13 @@ The plan is to use this web-component like so:
 ## What does the web component do?
 
 Actually the web component `<hc-event>` is quite stupid and does not do a lot.
-The one core feature it has is:
+The core features it has are:
 - make the dates in the `<time>` DOM nodes more readable by applying some simple logic
   - when a start and an end date is given it figures out how to make it most readable
     e.g. "1 May - 2 May", or "1 May 10:00 - 12:00"
   - if only a start date is given the date and time is nicely formatted
+- by using `<hc-event-tags>` around a `<ul>` of tags the web component provides
+  methods `hasTag(<string>)` and `withEachTag(<callback>)`
 
 ## How to develop?
 
