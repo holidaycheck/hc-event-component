@@ -1,38 +1,9 @@
-import {formatTimes} from './times.js';
-
-/*
-TODO
-- [x] nicer dates, more readable
-- [x] link the map, <a href="http://maps.google.com/maps?q=" className="fa fa-map"></a><br>
-- [x] add nomodule, for those browsers that need it (and i would also assume they dont speak ES6 and need the polyfill)
-- [x] show some tags only, expand on demand
-- [ ] filter by tag
-- [ ] provide structured data http://schema.org/Event for event: https://developers.google.com/search/docs/data-types/event
-- [ ] show description when hovering the event
-- [ ] show nice tooltips on hover (e.g. location, datetime info, twitter account)
-- [ ] "tweet this event" button
- */
-
-const allTags = rootNode => {
-  const tagNodes = rootNode.querySelectorAll('hc-event-tags li');
-  const tags = [];
-  tagNodes.forEach(node => tags.push(node.innerText));
-  return tags;  
-}
-
 class HcEvent extends HTMLElement {
-  connectedCallback() {
-    formatTimes(this.querySelectorAll('time'));
-  }
-  hasTag(tagName) {
-    const tags = allTags(this);
-    const lowerCaseTags = tags.map(tag => tag.toLowerCase());
-    return lowerCaseTags.includes(tagName.toLowerCase());
-  }
-  withEachTag(cb) {
-    const tags = allTags(this);
-    tags.forEach(cb);
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
 }
 
-window.customElements.define('hc-event', HcEvent);
+customElements.define('hc-event', HcEvent);
