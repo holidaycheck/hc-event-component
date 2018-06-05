@@ -62,43 +62,50 @@
     /*
       The <hc-event> specific styles.
      */
+    hc-event:nth-child(odd) {
+      background: #EEEEEE;
+    }
+    
+    /* the fallback rendering, when <hc-event> is not defined */
+    hc-event:not(:defined) > * {
+      display: block;
+    }
   </style>
   
   <hc-event itemscope itemtype="http://schema.org/Event">
-    <time itemprop="startDate" content="2018-06-02 10:00">2018-06-02 10:00</time> - 
-    <time itemprop="endDate" content="2018-06-02 18:00">2018-06-02 18:00</time>
+    <hc-event-start itemprop="startDate" content="2018-06-02 10:00">2018-06-02 10:00</hc-event-start> - 
+    <hc-event-end itemprop="endDate" content="2018-06-02 18:00">2018-06-02 18:00</hc-event-end>
     <hc-event-tags>
-      <ul>
-        <li>unconference</li>
-        <li>open space</li>
-        <li>JavaScript</li>
-        <li>self organizing</li>
-        <li>learning</li>
-      </ul>
+      <hc-event-tag>unconference</hc-event-tag>
+      <hc-event-tag>open space</hc-event-tag>
+      <hc-event-tag>JavaScript</hc-event-tag>
+      <hc-event-tag>self organizing</hc-event-tag>
+      <hc-event-tag>learning</hc-event-tag>
     </hc-event-tags>
-    <br>
     
     <meta itemprop="name" content="JSCraftCamp 2018"/>
-    <a itemprop="url" href="http://jscraftcamp.org/">JSCraftCamp 2018</a>
+    <hc-event-name itemprop="url" href="http://jscraftcamp.org/">JSCraftCamp 2018</hc-event-name>
     
     <meta itemprop="location" content="HolidayCheck Office - Germany, 81673 Munich, Neumarkter Str. 61"/>
-    <a href="http://maps.google.com/maps?q=HolidayCheck%20Office%20-%20Germany%2C%2081673%20Munich%2C%20Neumarkter%20Str.%2061" class="fa fa-map"></a>
+    <hc-event-location>HolidayCheck Office - Germany, 81673 Munich, Neumarkter Str. 61</hc-event-location>
     
-    <a href="https://www.twitter.com/jscraftcamp" class="fa fa-twitter"></a>
+    <hc-event-twitter>jscraftcamp</hc-event-twitter>
     
-    <p itemprop="description">
-      This event uses <a href="http://schema.org/Event">schema.org microdata</a> for outlining the
-      event's data.
-    </p>
-    <ul itemprop="description">
-      <li>See the "itemscope" and the other various "item*" attributes on the according DOM nodes. 
-      <li>Also note the start/endDate each duplicate the timestamp, in the "content" attribute
-          and inside the node's content itself.
-      <li>The embedded "meta" tag contains the complete address, marked with "itemprop=location"
-          to tell all the machines the actual address, which is also URI encoded in the maps URL below.
-      <li>The "itemprop=url" marks the event's URL.</li>
-      <li>The meta tag "itemprop=name" specifies the name of the event, since the a-href is already in use for the URL.</li>
-    </ul>
+    <hc-event-description>
+      <p itemprop="description">
+        This event uses <a href="http://schema.org/Event">schema.org microdata</a> for outlining the
+        event's data.
+      </p>
+      <ul itemprop="description">
+        <li>See the "itemscope" and the other various "item*" attributes on the according DOM nodes. 
+        <li>Also note the start/endDate each duplicate the timestamp, in the "content" attribute
+            and inside the node's content itself.
+        <li>The embedded "meta" tag contains the complete address, marked with "itemprop=location"
+            to tell all the machines the actual address, which is also URI encoded in the maps URL below.
+        <li>The "itemprop=url" marks the event's URL.</li>
+        <li>The meta tag "itemprop=name" specifies the name of the event, since the a-href is already in use for the URL.</li>
+      </ul>
+    </hc-event-description>
   </hc-event>
   
   <hc-event>
