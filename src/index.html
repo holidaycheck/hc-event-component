@@ -61,12 +61,31 @@
   /*
     The <hc-event> specific styles.
    */
-  hc-event:nth-child(odd) {
+  hc-event:nth-child(even) {
     background: #EEEEEE;
   }
-  
+</style>
+
+<style>
   /* the fallback rendering, when <hc-event> is not defined */
+  hc-event:not(:defined),
   hc-event:not(:defined) > * {
+    display: block;
+  }
+  hc-event:not(:defined) > hc-event-end,
+  hc-event:not(:defined) > hc-event-start,
+  hc-event:not(:defined) > hc-event-tag,
+  hc-event:not(:defined) > a[is=hc-event-name]
+  {
+    display: inline;
+  }
+  hc-event:not(:defined) > hc-event-twitter:before {
+    content: 'Twitter: @';
+  }
+  hc-event:not(:defined) > hc-event-description {
+    display: none;
+  }
+  hc-event:not(:defined):hover > hc-event-description {
     display: block;
   }
 </style>
