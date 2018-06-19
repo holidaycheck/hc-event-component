@@ -5,73 +5,73 @@
 <link rel="shortcut icon" href="//techblog.holidaycheck.com/img/hc-labs-only-logo64x64.png">
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-hi-ce.js"></script>
-<script type="module" src="./HcEvent.js"></script>
-<script nomodule src="../build/HcEvent.js"></script>
+<!--<script type="module" src="./HcEvent.js"></script>-->
+<!--<script nomodule src="../build/HcEvent.js"></script>-->
 <link rel="stylesheet" href="./style.css"/>
 
-<body>
-  <style>
-    /*
-      The HC styles, as used on the tech blog.
-     */
-    @import url(//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Droid+Serif:400,400italic,700|Playfair+Display);html {
-        font-family: sans-serif;
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%
-    }
-    @font-face {
-        font-family: 'FontAwesome';
-        src: url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.eot?v=4.3.0");
-        src: url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"),url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"),url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
-        font-weight: normal;
-        font-style: normal
-    }
-    
-    body {
-      line-height: 1.65;
-      margin-top: 3rem;
-      color: #333337;
-      font-family: "Droid Serif",serif;
-      font-size: 21px;
-    }
-    a {
-      color: #0058a3;
-      text-decoration: none;
-    }
-    a:hover, a:active, a:focus {
-      text-decoration: none;
-      color: #333337;
-      border-bottom: solid 1px #fad73c;
-    }
-    .fa {
-      display: inline-block;
-      font: normal normal normal 14px/1 FontAwesome;
-      font-size: inherit;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      transform: translate(0, 0);
-    }
-    .fa-twitter:before {
-        content: "\f099";
-    }
-    .fa-map:before {
-      content: "\f041";
-    }
-    
-    /*
-      The <hc-event> specific styles.
-     */
-    hc-event:nth-child(odd) {
-      background: #EEEEEE;
-    }
-    
-    /* the fallback rendering, when <hc-event> is not defined */
-    hc-event:not(:defined) > * {
-      display: block;
-    }
-  </style>
+<style>
+  /*
+    The HC styles, as used on the tech blog.
+   */
+  @import url(//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Droid+Serif:400,400italic,700|Playfair+Display);html {
+      font-family: sans-serif;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%
+  }
+  @font-face {
+      font-family: 'FontAwesome';
+      src: url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.eot?v=4.3.0");
+      src: url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"),url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"),url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),url("//techblog.holidaycheck.com/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+      font-weight: normal;
+      font-style: normal
+  }
   
+  body {
+    line-height: 1.65;
+    margin-top: 3rem;
+    color: #333337;
+    font-family: "Droid Serif",serif;
+    font-size: 21px;
+  }
+  a {
+    color: #0058a3;
+    text-decoration: none;
+  }
+  a:hover, a:active, a:focus {
+    text-decoration: none;
+    color: #333337;
+    border-bottom: solid 1px #fad73c;
+  }
+  .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+  }
+  .fa-twitter:before {
+      content: "\f099";
+  }
+  .fa-map:before {
+    content: "\f041";
+  }
+  
+  /*
+    The <hc-event> specific styles.
+   */
+  hc-event:nth-child(odd) {
+    background: #EEEEEE;
+  }
+  
+  /* the fallback rendering, when <hc-event> is not defined */
+  hc-event:not(:defined) > * {
+    display: block;
+  }
+</style>
+
+<body>
   <hc-event itemscope itemtype="http://schema.org/Event">
     <hc-event-start itemprop="startDate" content="2018-06-02 10:00">2018-06-02 10:00</hc-event-start> - 
     <hc-event-end itemprop="endDate" content="2018-06-02 18:00">2018-06-02 18:00</hc-event-end>
@@ -83,7 +83,7 @@
     <hc-event-tag>learning</hc-event-tag>
     
     <meta itemprop="name" content="JSCraftCamp 2018"/>
-    <hc-event-name itemprop="url" href="http://jscraftcamp.org/">JSCraftCamp 2018</hc-event-name>
+    <a is="hc-event-name" itemprop="url" href="http://jscraftcamp.org/">JSCraftCamp 2018</a>
     
     <meta itemprop="location" content="HolidayCheck Office - Germany, 81673 Munich, Neumarkter Str. 61"/>
     <hc-event-location>HolidayCheck Office - Germany, 81673 Munich, Neumarkter Str. 61</hc-event-location>
