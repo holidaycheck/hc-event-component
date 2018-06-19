@@ -151,41 +151,40 @@
   </hc-event>
   
   <hc-event>
-    <time>2018-02-07 10:00</time> ... <time>2018-02-08 18:00</time>
-    <hc-event-tags>
-      <ul>
-        <li>conference</li>
-        <li>web performance</li>
-        <li>ads</li>
-        <li>third-party scripts</li>
-        <li>A/B testing</li>
-        <li>HTTP/2</li>
-        <li>debugging</li>
-        <li>JAM stack</li>
-        <li>PWA</li>
-        <li>web fonts loading</li>
-        <li>memory/CPU perf</li>
-        <li>service workers</li>
-      </ul>
-    </hc-event-tags>
+    <hc-event-start>2018-02-07 10:00</hc-event-start> ... <hc-event-end>2018-02-08 18:00</hc-event-end>
+    
+    <hc-event-tag>conference</hc-event-tag>
+    <hc-event-tag>web performance</hc-event-tag>
+    <hc-event-tag>ads</hc-event-tag>
+    <hc-event-tag>third-party scripts</hc-event-tag>
+    <hc-event-tag>A/B testing</hc-event-tag>
+    <hc-event-tag>HTTP/2</hc-event-tag>
+    <hc-event-tag>debugging</hc-event-tag>
+    <hc-event-tag>JAM stack</hc-event-tag>
+    <hc-event-tag>PWA</hc-event-tag>
+    <hc-event-tag>web fonts loading</hc-event-tag>
+    <hc-event-tag>memory/CPU perf</hc-event-tag>
+    <hc-event-tag>service workers</hc-event-tag>
+    
     <br>
-    <a href="https://smashingconf.com/">Smashing Conference</a>
-    <a href="http://maps.google.com/maps?q=London%2C%20England" class="fa fa-map">London, England</a>
-    <a href="https://www.twitter.com/smashingconf" class="fa fa-twitter"></a>
-    <p>This event is not schema outlined at all, so it's not so nicely machine readable. Bummer.</p>
+    <a is="hc-event-name" href="https://smashingconf.com/">Smashing Conference</a>
+    <br>
+    <hc-event-location>London, England</hc-event-location>
+    <br>
+    <hc-event-twitter>smashingconf</hc-event-twitter>
+    <br>
+    <hc-event-description>
+      <p>This event is not schema outlined at all, so it's not so nicely machine readable. Bummer.</p>
+    </hc-event-description>
   </hc-event>
 
   <hc-event>
-    <time>2018-04-16 19:00</time>
-    <hc-event-tags>
-      <ul>
-        <li>Meetup</li>
-        <li>JavaScript</li>
-      </ul>
-    </hc-event-tags>
+    <hc-event-start>2018-04-16 19:00</hc-event-start>
+    <hc-event-tag>Meetup</hc-event-tag>
+    <hc-event-tag>JavaScript</hc-event-tag>
     <br>
-    <a href="https://www.meetup.com/JavaScript-The-Language/events/249034286/">JavaScript The Language - Map, Set, WeakMap</a>
-    <a href="http://maps.google.com/maps?q=HolidayCheck%20offices%2C%20Munich%2C%20Germany" class="fa fa-map">HolidayCheck offices, Munich, Germany</a>
+    <a is="hc-event-name" href="https://www.meetup.com/JavaScript-The-Language/events/249034286/">JavaScript The Language - Map, Set, WeakMap</a>
+    <hc-event-location>HolidayCheck offices, Munich, Germany</hc-event-location>
   </hc-event>
 
 </body>
