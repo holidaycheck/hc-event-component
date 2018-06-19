@@ -68,17 +68,10 @@
 
 <style>
   /* the fallback rendering, when <hc-event> is not defined */
-  hc-event:not(:defined),
-  hc-event:not(:defined) > * {
+  hc-event:not(:defined) {
     display: block;
   }
-  hc-event:not(:defined) > hc-event-end,
-  hc-event:not(:defined) > hc-event-start,
-  hc-event:not(:defined) > hc-event-tag,
-  hc-event:not(:defined) > a[is=hc-event-name]
-  {
-    display: inline;
-  }
+  
   hc-event:not(:defined) > hc-event-twitter:before {
     content: 'Twitter: @';
   }
@@ -100,15 +93,15 @@
     <hc-event-tag>JavaScript</hc-event-tag>
     <hc-event-tag>self organizing</hc-event-tag>
     <hc-event-tag>learning</hc-event-tag>
-    
+    <br>    
     <meta itemprop="name" content="JSCraftCamp 2018"/>
     <a is="hc-event-name" itemprop="url" href="http://jscraftcamp.org/">JSCraftCamp 2018</a>
-    
+    <br>
     <meta itemprop="location" content="HolidayCheck Office - Germany, 81673 Munich, Neumarkter Str. 61"/>
     <hc-event-location>HolidayCheck Office - Germany, 81673 Munich, Neumarkter Str. 61</hc-event-location>
-    
+    <br>
     <hc-event-twitter>jscraftcamp</hc-event-twitter>
-    
+    <br>
     <hc-event-description>
       <p itemprop="description">
         This event uses <a href="http://schema.org/Event">schema.org microdata</a> for outlining the
@@ -127,21 +120,22 @@
   </hc-event>
   
   <hc-event>
-    <time>2018-05-01 9:30</time> to <time>2018-05-02 18:00</time>
-    <hc-event-tags>
-      <ul>
-        <li>CodeRetreat</li>
-        <li>JavaScript</li>
-      </ul>
-    </hc-event-tags>
+    <hc-event-start>2018-05-01 9:30</hc-event-start> to <hc-event-end>2018-05-02 18:00</hc-event-end>
+    <hc-event-tag>CodeRetreat</hc-event-tag>
+    <hc-event-tag>JavaScript</hc-event-tag>
     <br>
-    <a href="http://jscoderetreat.com/">JS CodeRetreat #13</a>
-    <a href="http://maps.google.com/maps?q=Some%20where%20else%2C%20not%20in%20HC%20offices" class="fa fa-map"></a>
-    <a href="https://www.twitter.com/jscoderetreat" class="fa fa-twitter"></a>
-    <p itemprop="description">
-      This event uses <a href="http://schema.org/Event">schema.org JSON-LD</a> for outlining the
-      event's data. See the JSON-LD block in the code, for details.
-    </p>
+    <a is="hc-event-name" href="http://jscoderetreat.com/">JS CodeRetreat #13</a>
+    <br>
+    <hc-event-location>Some where else, not in HC offices</hc-event-location>
+    <br>
+    <hc-event-twitter>jscoderetreat</hc-event-twitter>
+    <br>
+    <hc-event-description>
+      <p itemprop="description">
+        This event uses <a href="http://schema.org/Event">schema.org JSON-LD</a> for outlining the
+        event's data. See the JSON-LD block in the code, for details.
+      </p>
+    </hc-event-description>
     <script type="application/ld+json">
     {
       "@context": "http://schema.org",
